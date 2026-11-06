@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Your personal Instagram data - never commit this
+instagram-*/
+*.zip
+followers_*.json
+following.json
+!sample_data/followers_1.json
+!sample_data/following.json
+
+# Output
+*.csv
+.DS_Store

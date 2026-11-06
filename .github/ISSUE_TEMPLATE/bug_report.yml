@@ -1,0 +1,54 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Do not paste your real Instagram export or real usernames.**
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you get instead?
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command you ran
+      placeholder: python not_following_back.py ./instagram-export
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error output
+      render: shell
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [Windows, macOS, Linux, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Export format
+      options: [JSON, HTML]
+    validations:
+      required: true
+  - type: textarea
+    id: snippet
+    attributes:
+      label: Anonymized JSON structure (optional)
+      description: A tiny snippet with fake usernames, if parsing seems broken.
+      render: json

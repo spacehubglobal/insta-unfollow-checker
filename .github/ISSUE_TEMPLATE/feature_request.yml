@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an idea
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not require Instagram login, scraping, or automating actions on Instagram
+          required: true
